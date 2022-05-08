@@ -25,18 +25,26 @@ class hangman:
             if self.lives == 0:
                 print('Game Over')
             else:
-                print('wrong answer you have 2 lives left')
-                
-            answer3 = input('enter the secret word: ')           
+                if self.lives == 2: 
+                    print('wrong answer you have 2 lives left')
+                else:
+                    print('you have 1 life left')
+                    
+        answer3 = input('enter the secret word: ')           
         if answer3 == self.word1 or answer3 == self.word2 or answer3 == self.word3:
             print('Wow..! right answer.')
+            
         else:
             self.lives -= 1
             if self.lives == 0:
                 print('Game Over')
             else:
-                print('wrong answer you have 2 lives left')
-        
+                if self.lives == 2:
+                    print('wrong answer you have 2 lives left')
+                else:
+                    self.lives == 1
+                    print('wrong you have 1 life left.')
+                    
         answer4 = input('enter the secret word: ')
         if answer4 == self.word1 or answer4 == self.word2 or answer4 == self.word3:
             print('Wow..! right answer.')
@@ -46,14 +54,18 @@ class hangman:
                 print('Game Over')
                 
             else:
-                print('wrong answer you have 2 lives left')
+                if self.lives == 2:
+                    print('wrong answer you have 2 lives left')
+                else:
+                    self.lives == 1
+                    print('wrong you have 1 life left.')
                  
         answer5 = input('enter your secret word: ')
         if answer5 == self.word1 or answer5 == self.word2 or answer5 == self.word3:
             print('Wow..! right answer.')
         else:
-            self.lives -= 1
-            if self.lives == 0:
-                print('Game Over')
-            else:
+            if self.lives == 2:
                 print('wrong answer you have 2 lives left')
+            else:
+                self.lives == 1
+                print('Game Over')
